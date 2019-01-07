@@ -1,4 +1,4 @@
-package net.psv73.sptest;
+package net.psv73.sptest.impl;
 
 import net.psv73.sptest.interfaces.Car;
 import net.psv73.sptest.interfaces.Radio;
