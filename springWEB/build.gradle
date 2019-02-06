@@ -5,6 +5,8 @@ plugins {
 group 'net.psv73'
 version '1.0-SNAPSHOT'
 
+apply plugin: 'war'
+
 sourceCompatibility = 1.8
 
 repositories {
@@ -14,4 +16,5 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     implementation 'javax.servlet:javax.servlet-api:4.0.1'
+    compile group: 'org.springframework', name: 'spring-webmvc', version: '5.1.4.RELEASE'
 }
