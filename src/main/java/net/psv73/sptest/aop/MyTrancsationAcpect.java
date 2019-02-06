@@ -6,6 +6,15 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Component
 public class MyTrancsationAcpect {
+
+    @Pointcut("execution(* net.psv73.sptest.aop.MyUserRepo.withParams(String)) && args(name)")
+    public void paramPointcut(String name) {}
+
+    @Before(value = "paramPointcut(name)")
+    public void beforMethodWithParam(String name) {
+        System.out.println("you entered as " + name);
+    }
+
     @Pointcut("execution(* net.psv73.sptest.aop.MyUserRepo.getInfo())")
     public void myPointcut() {}
 
