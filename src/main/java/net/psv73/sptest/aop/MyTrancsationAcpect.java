@@ -1,4 +1,4 @@
-package net.psv73.sptest.apo;
+package net.psv73.sptest.aop;
 
 import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Component
 public class MyTrancsationAcpect {
-    @Pointcut("execution(* net.psv73.sptest.apo.MyUserRepo.getInfo())")
+    @Pointcut("execution(* net.psv73.sptest.aop.MyUserRepo.getInfo())")
     public void myPointcut() {}
 
     @Before("myPointcut()")

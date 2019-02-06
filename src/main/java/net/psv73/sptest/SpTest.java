@@ -1,7 +1,6 @@
 package net.psv73.sptest;
 
-import net.psv73.sptest.apo.MyRepo;
-import net.psv73.sptest.interfaces.Car;
+import net.psv73.sptest.aop.MyRepo;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -14,7 +13,7 @@ public class SpTest {
 //        context.refresh();
 //        Car toyota = context.getBean(Car.class);
 //        toyota.drive();
-        ApplicationContext context = new AnnotationConfigApplicationContext(net.psv73.sptest.apo.MyConf.class);
+        ApplicationContext context = new AnnotationConfigApplicationContext(net.psv73.sptest.aop.MyConf.class);
         MyRepo bean = context.getBean(MyRepo.class);
         bean.getInfo();
 

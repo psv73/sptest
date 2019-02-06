@@ -1,4 +1,4 @@
-package net.psv73.sptest.apo;
+package net.psv73.sptest.aop;
 
 import org.springframework.stereotype.Component;
 
